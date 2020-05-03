@@ -2,5 +2,38 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/gin-contrib/sse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/gin-gonic/gin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/go-playground/locales" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/go-playground/universal-translator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/go-playground/validator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/golang/protobuf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/jinzhu/gorm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/jinzhu/inflection" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/leodido/go-urn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/lib/pq" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/mattn/go-isatty" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/github.com/ugorji/go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/golang.org/x/sys" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/google.golang.org/protobuf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependencies/gopkg.in/yaml.v2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/0xAX/notificator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/codegangsta/envy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/codegangsta/gin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/cpuguy83/go-md2man" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/gin-contrib/sse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/gin-gonic/gin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/go-playground/locales" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/go-playground/universal-translator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/go-playground/validator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/golang/protobuf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/leodido/go-urn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/mattn/go-isatty" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/mattn/go-shellwords" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/ugorji/go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golang.org/x/sys" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/google.golang.org/protobuf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gopkg.in/urfave/cli.v1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gopkg.in/yaml.v2" vcs="Git" />
   </component>
 </project>

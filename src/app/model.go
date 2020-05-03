@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"github.com/jinzhu/gorm"
+	"time"
+)
 
 var employees = map[string]Employee{
 	"962134": Employee{
@@ -76,4 +79,10 @@ type TimeOff struct {
 	Amount    float32	`json:"hours" binding:"required,numeric,gt=0"`
 	StartDate time.Time	`json:"startDate" binding:"required"`
 	Status    string	`json:"status" binding:"required"`
+}
+
+type Product struct {
+	gorm.Model
+	Code string `json:"code" binding:"required"`
+	Price uint	`json:"price" binding:"required"`
 }

@@ -2,11 +2,12 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/jinzhu/gorm"
 	"net/http"
 	"time"
 )
 
-func registerRoute() *gin.Engine {
+func registerRoute(db *gorm.DB) *gin.Engine {
 	route := gin.Default()
 
 	route.LoadHTMLGlob("templates/**/*.html")
@@ -109,6 +110,12 @@ func registerRoute() *gin.Engine {
 		context.HTML(http.StatusOK,"admin-overview.html", nil)
 	})
 
+	route.POST("/add-product", func(context *gin.Context) {
+		var product Product
+		context.Bind(&product)
+		db.Create(&product)
+		context.JSON(http.StatusCreated, gin.H{"product" : product})
+	})
 
 	route.Static("public", "./public")
 

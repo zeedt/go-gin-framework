@@ -1,6 +1,7 @@
 package main
 
 func main() {
-	route := registerRoute()
+	db :=setUpDb()
+	route := registerRoute(db)
 	route.Run(":3003")
 }
