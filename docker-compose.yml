@@ -1,0 +1,23 @@
+version: '2'
+
+services: 
+    my-postgres:
+        image: postgres
+        environment: 
+            POSTGRES_PASSWORD: root
+            POSTGRES_USERNAME: postgres
+        networks: 
+            - go-app-network
+        ports: 
+            - "5439:5432"
+    gin-go:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        ports: 
+            - "3007:3003"
+        networks: 
+            - go-app-network
+networks: 
+    go-app-network:
+        driver: bridge
