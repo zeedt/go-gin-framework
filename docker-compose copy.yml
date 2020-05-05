@@ -2,7 +2,6 @@ version: '2'
 
 services: 
     my-postgres:
-        container_name: my_postgres
         image: postgres
         environment: 
             POSTGRES_PASSWORD: root
@@ -12,7 +11,9 @@ services:
         ports: 
             - "5439:5432"
     gin-go:
-        image: go-gin
+        build: 
+            context: .
+            dockerfile: Dockerfile
         ports: 
             - "3007:3003"
         networks: 

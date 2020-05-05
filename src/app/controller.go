@@ -9,17 +9,37 @@ import (
 
 func registerRoute(db *gorm.DB) *gin.Engine {
 	route := gin.Default()
+	route.Use(loginMiddleware)
 
 	route.LoadHTMLGlob("templates/**/*.html")
 
 	route.GET("/test", func(context *gin.Context) {
 		context.String(http.StatusOK, "Hello from %s", "Gin" )
 	})
-	route.GET("/", func(context *gin.Context) {
+	route.Any("/", func(context *gin.Context) {
 		context.HTML(http.StatusOK, "index.html", nil )
 	})
 
-	route.GET("/login", func(context *gin.Context) {
+	route.Any("/login", func(context *gin.Context) {
+		employeeNumber := context.PostForm("employeeNumber")
+		password := context.PostForm("password")
+		for _,identity:=range identities {
+			if identity.employeeNumber == employeeNumber && identity.password == password {
+				lc := loginCookie{
+					value:      employeeNumber,
+					expiration: time.Now().Add(24*time.Hour),
+					origin:     context.Request.RemoteAddr,
+				}
+				loginCookies[employeeNumber] = lc
+
+				maxAge := lc.expiration.Unix() - time.Now().Unix()
+				context.SetCookie(loginCookieName, lc.value, int(maxAge), "","", false,true)
+
+				context.Redirect(http.StatusTemporaryRedirect, "/")
+				return
+
+			}
+		}
 		context.HTML(http.StatusOK, "login.html", nil)
 	})
 

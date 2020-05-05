@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.19.0 (f63a961c)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: gin-go
+  name: gin-go
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.19.0 (f63a961c)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: gin-go
+    spec:
+      containers:
+      - image: go-gin
+        name: gin-go
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3003
+        resources: {}
+      restartPolicy: Always
+status: {}
